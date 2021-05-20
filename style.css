@@ -1,0 +1,201 @@
+	body {
+	/* 	background-color:black; */
+	background-color: #060a1f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/*=========================
+  this is for light mode 
+  ========================*/
+
+body.light {
+	background-color: #d1dae3;
+}
+
+
+/*===================================================end===========================================================*/
+
+
+/*===========================
+  outer watch like box watch border etc
+  ======================================*/
+
+#clock_container {
+	position: relative;
+	background: url(clock.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border: 4px solid #091921;
+	width: 45vw;
+	height: 45vw;
+	/* margin:auto; */
+	border-radius: 350px;
+	box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 20px 20px 20px rgba(0, 0, 0, 0.3), inset -8px -8px 15px rgba(255, 255, 255, 0.05), inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/*===================================================end===========================================================*/
+
+body.light #clock_container {
+	background: url(clock.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border: 4px solid #cad3dc;
+	box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5), 20px 20px 20px rgba(0, 0, 0, 0.3), inset -8px -8px 15px rgba(255, 255, 255, 0.5), inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/*=========================================
+  this css for white dot of the mid of the watch
+  ===========================================*/
+
+#clock_container::before {
+	content: "";
+	position: absolute;
+	width: 5%;
+	height: 5%;
+	background-color: white;
+	border-radius: 15px;
+	top: 47.5%;
+	left: 47.5%;
+	z-index: 1000;
+}
+
+body.light #clock_container::before {
+	background-color: #008eff;
+}
+
+
+/*===================================================end===========================================================*/
+
+#hour,#min,#sec {
+	position: absolute;
+	transform-origin: bottom;
+}
+
+
+/*======================
+   set hour css
+   =======================*/
+
+#hour {
+	top: 24%;
+	left: 48.5%;
+	background: tomato;
+	border-radius: 10px;
+	width: 2%;
+	height: 26%;
+	/*  display: none; */
+}
+
+
+/*===========================================================end css hour==========================================*/
+
+
+/*======================
+   set mintues css
+   =======================*/
+
+#min {
+	background: white;
+	border-radius: 15px;
+	width: 1.5%;
+	height: 33%;
+	top: 17%;
+	left: 49%;
+	/* display: none; */
+}
+
+body.light #min {
+	background: black;
+}
+
+
+/*===========================================================end css minutes==========================================*/
+
+
+/*======================
+   set seconds css
+   =======================*/
+
+#sec {
+	background: #008eff;
+	border-radius: 20px;
+	width: 1%;
+	height: 40%;
+	top: 10%;
+	left: 49.5%;
+	/* display:none; */
+}
+
+
+/*===========================================================end css seconds==========================================*/
+
+
+/*===============================
+  start css for light and dark mode
+  ===================================*/
+
+
+/*==================================
+   toggleClass css for light mode 
+   ==================================*/
+
+.toggleClass {
+	position: absolute;
+	top: 9%;
+	right: 16%;
+	width: 4%;
+	height: 3%;
+	border-radius: 50px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+}
+
+.toggleClass::before {
+	content: "Light-Mode";
+	color: white;
+	position: relative;
+	white-space: nowrap;
+	left: 104%;
+}
+
+body.light .toggleClass {
+	background-color: black;
+	color: black;
+}
+
+body.light .toggleClass::before {
+	content: "Dark-Mode";
+	color: black;
+	position: relative;
+	white-space: nowrap;
+	left: 104%;
+}
+
+@media only screen and (max-width:1050px) {
+	body {
+		/* background-color: black; */
+		background-color: #060a1f;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 37%;
+	}
+	.toggleClass {
+		position: absolute;
+		top: 81%;
+		right: 62%;
+		width: 5%;
+		height: 3%;
+		border-radius: 50px;
+		background-color: white;
+		display: flex;
+		align-items: center;
+		font-size: 24px;
+	}
