@@ -178,7 +178,7 @@ body.light .toggleClass::before {
 	left: 104%;
 }
 
-@media only screen and (max-width:1050px) {
+@media only screen and (max-width:700px) {
 	body {
 		/* background-color: black; */
 		background-color: #060a1f;
@@ -199,3 +199,33 @@ body.light .toggleClass::before {
 		align-items: center;
 		font-size: 24px;
 	}
+}
+@media only screen and (min-width:700px) and (max-width:1050px){
+	body {
+		/* background-color: black; */
+		background-color: #060a1f;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 37%;
+	}
+	.toggleClass {
+    position: absolute;
+    top: 76%;
+    right: 61%;
+    width: 6%;
+    height: 5%;
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 52px;
+	}
+	.toggleClass::before {
+	content: "Light-Mode";
+	color: white;
+	position: relative;
+	white-space: nowrap;
+	left: 104%;
+   }
+}
